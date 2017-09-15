@@ -16,6 +16,8 @@
 		0DE722971F6C54D300253515 /* pennDiningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE722961F6C54D300253515 /* pennDiningTests.swift */; };
 		0DE722A21F6C54D300253515 /* pennDiningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE722A11F6C54D300253515 /* pennDiningUITests.swift */; };
 		0DE722B01F6C57D300253515 /* menuDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE722AF1F6C57D300253515 /* menuDetailVC.swift */; };
+		0DE722B21F6C6A6D00253515 /* listCafeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE722B11F6C6A6D00253515 /* listCafeVC.swift */; };
+		0DE722B41F6C789900253515 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE722B31F6C789900253515 /* customCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0DE722A11F6C54D300253515 /* pennDiningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pennDiningUITests.swift; sourceTree = "<group>"; };
 		0DE722A31F6C54D300253515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DE722AF1F6C57D300253515 /* menuDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuDetailVC.swift; sourceTree = "<group>"; };
+		0DE722B11F6C6A6D00253515 /* listCafeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = listCafeVC.swift; sourceTree = "<group>"; };
+		0DE722B31F6C789900253515 /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				0DE7227E1F6C54D300253515 /* AppDelegate.swift */,
 				0DE722801F6C54D300253515 /* ViewController.swift */,
 				0DE722AF1F6C57D300253515 /* menuDetailVC.swift */,
+				0DE722B11F6C6A6D00253515 /* listCafeVC.swift */,
+				0DE722B31F6C789900253515 /* customCell.swift */,
 				0DE722821F6C54D300253515 /* Main.storyboard */,
 				0DE722881F6C54D300253515 /* Assets.xcassets */,
 				0DE7228A1F6C54D300253515 /* LaunchScreen.storyboard */,
@@ -267,7 +273,9 @@
 			files = (
 				0DE722811F6C54D300253515 /* ViewController.swift in Sources */,
 				0DE7227F1F6C54D300253515 /* AppDelegate.swift in Sources */,
+				0DE722B41F6C789900253515 /* customCell.swift in Sources */,
 				0DE722B01F6C57D300253515 /* menuDetailVC.swift in Sources */,
+				0DE722B21F6C6A6D00253515 /* listCafeVC.swift in Sources */,
 				0DE722871F6C54D300253515 /* pennDining.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
