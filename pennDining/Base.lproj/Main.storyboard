@@ -58,41 +58,34 @@
                                     <navigationItem title="Dining" id="FdI-Az-7em"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        Dining Halls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A77-67-XOi">
-                                <rect key="frame" x="0.0" y="81" width="375" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uXk-Cf-6k5">
-                                <rect key="frame" x="0.0" y="119.5" width="375" height="545"/>
+                                <rect key="frame" x="0.0" y="122.5" width="375" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="545" id="baa-Rr-ubg"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="100" id="1EM-x2-3uZ" customClass="customCell" customModule="pennDining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="101" id="1EM-x2-3uZ" customClass="customCell" customModule="pennDining" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1EM-x2-3uZ" id="SJj-zd-gOy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdG-w0-CKJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="99.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="185" height="100.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="185" id="dYT-pM-TTu"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tX6-6e-mUV">
-                                                    <rect key="frame" x="201" y="44.5" width="42" height="21"/>
+                                                    <rect key="frame" x="201" y="45.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-v4-AUF">
-                                                    <rect key="frame" x="201" y="65.5" width="42" height="21"/>
+                                                    <rect key="frame" x="201" y="66.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -120,6 +113,13 @@
                                     <outlet property="delegate" destination="uds-WP-q1g" id="jMs-Y1-aMC"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   Dining Halls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A77-67-XOi">
+                                <rect key="frame" x="0.0" y="81" width="375" height="24.5"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -127,7 +127,7 @@
                             <constraint firstAttribute="trailing" secondItem="1rt-H7-aAI" secondAttribute="trailing" id="807-20-JpT"/>
                             <constraint firstItem="uXk-Cf-6k5" firstAttribute="top" secondItem="A77-67-XOi" secondAttribute="bottom" constant="17" id="I99-KZ-I7b"/>
                             <constraint firstAttribute="trailing" secondItem="A77-67-XOi" secondAttribute="trailing" id="Teb-O4-SKU"/>
-                            <constraint firstItem="A77-67-XOi" firstAttribute="top" secondItem="1rt-H7-aAI" secondAttribute="bottom" constant="17" id="Ycd-Nq-Jbi"/>
+                            <constraint firstItem="A77-67-XOi" firstAttribute="top" secondItem="1rt-H7-aAI" secondAttribute="bottom" constant="17" id="da5-VM-vFZ"/>
                             <constraint firstItem="uXk-Cf-6k5" firstAttribute="leading" secondItem="Hoo-tq-SR9" secondAttribute="leading" id="faW-B9-3V7"/>
                             <constraint firstItem="1rt-H7-aAI" firstAttribute="top" secondItem="Hoo-tq-SR9" secondAttribute="top" constant="20" id="ikj-gL-dI1"/>
                             <constraint firstItem="A77-67-XOi" firstAttribute="leading" secondItem="Hoo-tq-SR9" secondAttribute="leading" id="inZ-mT-tpE"/>

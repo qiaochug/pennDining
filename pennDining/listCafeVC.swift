@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -26,6 +27,44 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         // Do any additional setup after loading the view.
         cafes.delegate = self
         cafes.dataSource = self
+        
+        let usabledata: Data
+        
+        let urlString = URL(string: "http://api.pennlabs.org/dining/venues")
+        if let url = urlString {
+            let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error as Any)
+                } else {
+                    if let usabledata = data {
+                        print(usabledata) //JSONSerialization
+                        self.updateDetail(data: usabledata)
+                    }
+                }
+            }
+        task.resume()
+        }
+        
+        
+    }
+    
+    func updateDetail(data: Data){
+        let json = try? JSONSerialization.jsonObject(with: data, options: [])
+        
+        if let dictionary = json as? [String: Any] {
+            
+            if let nestedDictionary = dictionary["document"] as? [String: Any] {
+                
+                if let venues = nestedDictionary["venue"] as? [[String:Any]] {
+                    
+                    for vdict in venues{
+                        print(vdict["name"])
+                    }
+                    
+                }
+            }
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
