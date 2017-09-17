@@ -22,6 +22,7 @@ class customCell: UITableViewCell {
         self.layer.shadowRadius = 2
         self.layer.shadowColor =  UIColor.black.cgColor
         self.layer.masksToBounds = false
+        self.backgroundColor = UIColor.init(red: CGFloat(Float(248) / 255.0),green: CGFloat(Float(248) / 255.0),blue: CGFloat(Float(248) / 255.0), alpha: CGFloat(1.0))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
