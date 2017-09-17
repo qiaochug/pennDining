@@ -145,28 +145,31 @@
                         <outlet property="cafes" destination="uXk-Cf-6k5" id="aEK-PV-eaA"/>
                         <outlet property="dlabel" destination="A77-67-XOi" id="85O-Th-Ogg"/>
                         <outlet property="nb" destination="36U-yI-S3F" id="vA0-Er-x4j"/>
+                        <segue destination="guL-hB-gq9" kind="show" identifier="segue" id="Brq-HY-87L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwI-oW-QiL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="61.619190404797607"/>
         </scene>
-        <!--menuDetailVC-->
+        <!--Menu DetailVC-->
         <scene sceneID="EsG-bK-28C">
             <objects>
-                <viewController title="menuDetailVC" id="guL-hB-gq9" customClass="menuDetailVC" customModule="pennDining" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="guL-hB-gq9" customClass="menuDetailVC" customModule="pennDining" customModuleProvider="target" sceneMemberID="viewController">
                     <webView key="view" contentMode="scaleToFill" id="9ga-K2-W62">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </webView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="menuw" destination="9ga-K2-W62" id="DMK-0w-DTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMh-lL-DR7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1734" y="62"/>
+            <point key="canvasLocation" x="1516" y="62"/>
         </scene>
     </scenes>
 </document>

@@ -13,9 +13,8 @@ class menuDetailVC: UIViewController {
     @IBOutlet var menuw: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://university-of-pennsylvania.cafebonappetit.com/cafe/1920-commons/")
         if let unwrappedURL = url {
             
             let request = URLRequest(url: unwrappedURL)

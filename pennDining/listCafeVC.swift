@@ -9,13 +9,17 @@
 import UIKit
 import Foundation
 
+var url = URL(string: "http://university-of-pennsylvania.cafebonappetit.com/cafe/1920-commons/")
+
 class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var cafenames : [String] = ["1920 Commons", "McClelland Express","New College House","English House","Falk Kosher Dinning"]
     
-    var times : [String] = ["11 - 2 | 5 - 7:30","8 - 10 | 11 - 2","5 - 7","8:30 - 10 | 11 - 2 |5 - 8","11:30 - 2 | 8:15 - 10"]
+    var times : [String] = ["CLOSED","CLOSED","CLOSED","CLOSED","CLOSED"]
     
     var images = [UIImage(named: "1920Commons"),UIImage(named: "mcclelland"),UIImage(named: "nch"),UIImage(named: "kceh"),UIImage(named: "folkkosher") ]
+    
+    var urls = ["","","","",""]
     
     var today: String = "" //the date of today, updated when view load
 
@@ -65,14 +69,19 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
                         switch vdict["name"] as! String {
                         case "1920 Commons":
                             gethours(data: vdict["dateHours"] as! [[String : Any]], ind:0)
+                            urls[0] = vdict["facilityURL"] as! String
                         case "McClelland Express":
                             gethours(data: vdict["dateHours"] as! [[String : Any]], ind:1)
+                            urls[1] = vdict["facilityURL"] as! String
                         case "New College House":
                             gethours(data: vdict["dateHours"] as! [[String : Any]], ind:2)
+                            urls[2] = vdict["facilityURL"] as! String
                         case "English House":
                             gethours(data: vdict["dateHours"] as! [[String : Any]], ind:3)
+                            urls[3] = vdict["facilityURL"] as! String
                         case "Falk Kosher Dining":
                             gethours(data: vdict["dateHours"] as! [[String : Any]], ind:4)
+                            urls[4] = vdict["facilityURL"] as! String
                         default:
                             print("not yet in the list")
                         }
@@ -113,7 +122,7 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func gethours(data: [[String:Any]], ind: Int){
-        var str:String = "Closed"
+        var str:String = "CLOSED"
         for datehours in data{
             if datehours["date"] as! String == today{
                 str = "" // cafe is not closed, start empty string to record hours
@@ -224,6 +233,11 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        url = URL(string: urls[indexPath.row])
+        performSegue(withIdentifier: "segue", sender: self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -232,6 +246,8 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
 
 }
+
+
 
 extension String {
     subscript (i: Int) -> String {
