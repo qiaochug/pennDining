@@ -14,7 +14,7 @@ class menuDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        //unwrap the url passed by the previous view controller(listCafeVC)
         if let unwrappedURL = url {
             
             let request = URLRequest(url: unwrappedURL)
@@ -27,11 +27,14 @@ class menuDetailVC: UIViewController {
                     self.menuw.loadRequest(request)
                     
                 } else {
+                    //if there is no internet, pop errer message
                     let alertController = UIAlertController(title: "No Network", message:
                         "No Network Connection Found", preferredStyle: UIAlertControllerStyle.alert)
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                     
                     self.present(alertController, animated: true, completion: nil)
+                    
+                    //also print the error message to console
                     print("ERROR: \(error)")
                     
                 }
