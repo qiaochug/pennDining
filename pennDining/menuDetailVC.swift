@@ -27,7 +27,11 @@ class menuDetailVC: UIViewController {
                     self.menuw.loadRequest(request)
                     
                 } else {
+                    let alertController = UIAlertController(title: "No Network", message:
+                        "No Network Connection Found", preferredStyle: UIAlertControllerStyle.alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
                     
+                    self.present(alertController, animated: true, completion: nil)
                     print("ERROR: \(error)")
                     
                 }

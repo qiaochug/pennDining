@@ -26,6 +26,7 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var nb: UINavigationItem!
     @IBOutlet weak var dlabel: UILabel!
     @IBOutlet weak var cafes: UITableView!
+    @IBOutlet weak var rlabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class listCafeVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {
                     print(error as Any)
+                    
                 } else {
                     if let usabledata = data {
                         print(usabledata) //JSONSerialization
